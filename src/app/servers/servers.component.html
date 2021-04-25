@@ -1,4 +1,9 @@
 <p>servers works!</p>
 <button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
+<!-- <p>{{ allowNewServer }}</p> -->
+<!--  here in the paragraph tag string interpolation can be replaced by Property Binding as below -->
+<!-- use string interpolation when want to display the names dynamically whereas Property Binding can be
+used when want to assign value to the Html tags-->
+<p [innerHTML]="allowNewServer"></p>
 <app-server></app-server>
 <app-server></app-server>
