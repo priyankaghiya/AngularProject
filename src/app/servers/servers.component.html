@@ -1,5 +1,6 @@
 <p>servers works!</p>
-<button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreatedServer()">Add Server</button>
+<p>{{serverCreationStatus}}</p>
 <!-- <p>{{ allowNewServer }}</p> -->
 <!--  here in the paragraph tag string interpolation can be replaced by Property Binding as below -->
 <!-- use string interpolation when want to display the names dynamically whereas Property Binding can be
