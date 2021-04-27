@@ -6,7 +6,8 @@
 <br>
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreatedServer()">Add Server</button>
 <br>
-<p>{{serverCreationStatus}}</p>
+<p *ngIf="serverCreated">{{serverCreationStatus}}</p>
+<!-- Using the built in Directive ngIf -->
 <!-- <p>{{ allowNewServer }}</p> -->
 <!--  here in the paragraph tag string interpolation can be replaced by Property Binding as below -->
 <!-- use string interpolation when want to display the names dynamically whereas Property Binding can be
