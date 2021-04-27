@@ -3,7 +3,9 @@
 <!-- <input type="text" class="form-control" (input)="serverNameUpdate($event)"> -->
 <input type="text" class="form-control" [(ngModel)]="serverName">
 <!-- <p>{{serverName}}</p> -->
+<br>
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreatedServer()">Add Server</button>
+<br>
 <p>{{serverCreationStatus}}</p>
 <!-- <p>{{ allowNewServer }}</p> -->
 <!--  here in the paragraph tag string interpolation can be replaced by Property Binding as below -->
@@ -12,3 +14,18 @@ used when want to assign value to the Html tags-->
 <p [innerHTML]="allowNewServer"></p>
 <app-server></app-server>
 <app-server></app-server>
+
+<!--  Assignment -->
+<input type="text" class="form-control" [(ngModel)]="username"> <!-- Two way binding -->
+<br>
+<p>{{ username }}</p>  <!-- String Interpolation -->
+<button class="btn btn-primary" 
+    [disabled]="username === ''"
+    (click)="username = ''">Add User</button> <!-- Property Binding for disabled and event binding for click -->
+
+
+
+
+
+
+ 
