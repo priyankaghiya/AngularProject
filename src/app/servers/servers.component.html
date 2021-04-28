@@ -6,7 +6,13 @@
 <br>
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreatedServer()">Add Server</button>
 <br>
-<p *ngIf="serverCreated">{{serverCreationStatus}}</p>
+<p *ngIf="serverCreated; else noServer">{{serverCreationStatus}}</p>
+<ng-template #noServer>
+    <p>
+        No Server was created
+    </p>
+</ng-template>
+
 <!-- Using the built in Directive ngIf -->
 <!-- <p>{{ allowNewServer }}</p> -->
 <!--  here in the paragraph tag string interpolation can be replaced by Property Binding as below -->
