@@ -7,6 +7,8 @@
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreatedServer()">Add Server</button>
 <br>
 <p *ngIf="serverCreated; else noServer">{{serverCreationStatus}}</p>
+<!-- *ngIf is a Structured Directive and unlike it,attribute directives don't add or remove elements
+instead only change the element they are placed on-->
 <ng-template #noServer>
     <p>
         No Server was created
